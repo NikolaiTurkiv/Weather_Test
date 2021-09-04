@@ -11,7 +11,7 @@ class MainPojo {
 
     val hourly: Hourly? = null
 
-    private val daily: Daily? = null
+    val daily: Daily? = null
 
     private val flags: Flags? = null
 
