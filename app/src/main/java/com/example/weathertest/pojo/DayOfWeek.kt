@@ -2,11 +2,11 @@ package com.example.weathertest.pojo
 
 class DayOfWeek {
 
-    private var time = 0
+    var time = 0
 
     private var summary: String? = null
 
-    private var icon: String? = null
+    var icon: String? = null
 
     private var sunriseTime = 0
 
@@ -24,11 +24,11 @@ class DayOfWeek {
 
     private var precipType: String? = null
 
-    private var temperatureHigh = 0.0
+    var temperatureHigh = 0.0
 
     private var temperatureHighTime = 0.0
 
-    private var temperatureLow = 0.0
+    var temperatureLow = 0.0
 
     private var temperatureLowTime = 0.0
 
@@ -42,11 +42,11 @@ class DayOfWeek {
 
     private var dewPoint = 0.0
 
-    private var humidity = 0.0
+    var humidity = 0.0
 
     private var pressure = 0.0
 
-    private var windSpeed = 0.0
+    var windSpeed = 0.0
 
     private var windGust = 0.0
 

@@ -6,6 +6,6 @@ class Daily {
 
     private var icon: String? = null
 
-    private var data: List<DayOfWeek?>? = null
+    var data: List<DayOfWeek?>? = null
 
 }

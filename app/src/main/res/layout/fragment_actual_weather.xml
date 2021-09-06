@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/actualWeatherFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ActualWeatherFragment">
+
+    <ImageView
+        android:id="@+id/imageViewLocation"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City Name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+        app:layout_constraintTop_toTopOf="@+id/imageViewLocation" />
+
+    <TextView
+        android:id="@+id/textViewDarkSky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from darksy.net"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCityName" />
+
+    <TextView
+        android:id="@+id/textViewActualTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="-16 \u2109"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDarkSky"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDarkSky" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintStart_toStartOf="@+id/textViewActualTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/textViewActualTemperature" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewWeather"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDarkSky" />
+
+    <TextView
+        android:id="@+id/textViewHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="HUMIDITY"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/textViewActualTemperature" />
+
+    <TextView
+        android:id="@+id/textViewCountHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="22%"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewHumidity"
+        app:layout_constraintStart_toStartOf="@+id/textViewHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHumidity" />
+
+    <TextView
+        android:id="@+id/textViewUVIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="UV INDEX"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/textViewCountHumidity"
+        app:layout_constraintStart_toStartOf="@+id/textViewCountHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCountHumidity" />
+
+    <TextView
+        android:id="@+id/textViewCountUvIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textViewUVIndex"
+        app:layout_constraintStart_toStartOf="@+id/textViewUVIndex"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUVIndex" />
+
+    <TextView
+        android:id="@+id/textViewWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WIND"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewHumidity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewHumidity"
+        app:layout_constraintTop_toTopOf="@+id/textViewHumidity" />
+
+    <TextView
+        android:id="@+id/textViewSpeedWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 mph"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewWind"
+        app:layout_constraintStart_toStartOf="@+id/textViewWind"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWind" />
+
+    <TextView
+        android:id="@+id/textViewPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRESSURE"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSpeedWind"
+        app:layout_constraintStart_toStartOf="@+id/textViewSpeedWind"
+        app:layout_constraintTop_toTopOf="@+id/textViewUVIndex" />
+
+    <TextView
+        android:id="@+id/textViewCountPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="768 mmPh"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPressure"
+        app:layout_constraintStart_toStartOf="@+id/textViewPressure"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPressure" />
+
+    <TextView
+        android:id="@+id/textViewWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
