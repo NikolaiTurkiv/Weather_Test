@@ -6,7 +6,7 @@ class DayOfWeek {
 
     private var summary: String? = null
 
-    private var icon: String? = null
+    var icon: String? = null
 
     private var sunriseTime = 0
 

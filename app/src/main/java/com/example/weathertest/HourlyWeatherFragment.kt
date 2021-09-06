@@ -35,7 +35,6 @@ class HourlyWeatherFragment : Fragment() {
         val recyclerView = binding.RecyclerViewHour
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
-        var hours:List<HourWeatherCondition> = realm.where(HourWeatherCondition::class.java).findAll()
         recyclerView.adapter = adapter
 
     }

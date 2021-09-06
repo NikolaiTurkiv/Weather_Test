@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.ViewModelProvider
 import com.example.weathertest.database.WeatherCondition
 import com.example.weathertest.databinding.FragmentActualWeatherBinding
 import io.realm.Realm
@@ -14,6 +17,7 @@ class ActualWeatherFragment : Fragment() {
 
     private lateinit var binding: FragmentActualWeatherBinding
     private lateinit var realm : Realm
+    private val weatherViewModel: WeatherViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,8 +33,9 @@ class ActualWeatherFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val result:List<WeatherCondition> = realm.where(WeatherCondition::class.java).findAll()
-        for(r in result){
+
+        weatherViewModel.getActualWeather().observe(activity as LifecycleOwner,{
+            for(r in it){
             binding.textViewActualTemperature.text =  "${r.actualTemperature} \u2109"
             binding.textViewCountHumidity.text = r.actualHumidity.toString()
             binding.textViewCountUvIndex.text=r.actualUVindex.toString()
@@ -38,5 +43,21 @@ class ActualWeatherFragment : Fragment() {
             binding.textViewCountPressure.text = r.actualPressure.toString()
             binding.textViewSpeedWind.text=r.actualWind.toString()
         }
+
+        })
+//        val result:List<WeatherCondition> = realm.where(WeatherCondition::class.java).findAll()
+//        for(r in result){
+//            binding.textViewActualTemperature.text =  "${r.actualTemperature} \u2109"
+//            binding.textViewCountHumidity.text = r.actualHumidity.toString()
+//            binding.textViewCountUvIndex.text=r.actualUVindex.toString()
+//            binding.textViewCityName.text = r.actualLocation
+//            binding.textViewCountPressure.text = r.actualPressure.toString()
+//            binding.textViewSpeedWind.text=r.actualWind.toString()
+//        }
+
+
+
+
+
     }
 }
