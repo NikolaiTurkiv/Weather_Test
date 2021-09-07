@@ -2,4 +2,16 @@
     <string name="app_name">Weather Test</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="clear_day">Clear Day</string>
+    <string name="clear_night">Clear night</string>
+    <string name="string_weather">Weather</string>
+    <string name="cloudly_night">Cloudly night</string>
+    <string name="Rain">Rain</string>
+    <string name="snow">Snow</string>
+    <string name="sleet">Sleet</string>
+    <string name="Wind">Wind</string>
+    <string name="fog">Fog</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="cloudy_day">Cloudy day</string>
+    <string name="this_weeks_weather">This weeks weather</string>
 </resources>
