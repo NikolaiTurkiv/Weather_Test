@@ -1,9 +1,13 @@
 package com.example.weathertest.model.model.pojo
 
-class Hourly {
-    val summary: String? = null
+import com.google.gson.annotations.SerializedName
 
+class Hourly {
+
+    @SerializedName("icon")
     val icon: String? = null
 
+    @SerializedName("data")
     val data: List<HourInDay>? = null
+
 }

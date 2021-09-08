@@ -14,4 +14,6 @@
     <string name="cloudy">Cloudy</string>
     <string name="cloudy_day">Cloudy day</string>
     <string name="this_weeks_weather">This weeks weather</string>
+    <string name="icon_week_weather">icon_week_weather</string>
+    <string name="icon_hourly_weather">icon_hourly_weather</string>
 </resources>

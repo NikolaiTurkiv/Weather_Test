@@ -7,25 +7,24 @@
     tools:context=".view.week_weather_fragment.WeekWeatherFragment">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/this_week_weather_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/this_weeks_weather"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginTop="4dp"
+        android:layout_margin="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerViewWeek"
+        android:id="@+id/week_list_weather"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/this_week_weather_label" />
 </androidx.constraintlayout.widget.ConstraintLayout>

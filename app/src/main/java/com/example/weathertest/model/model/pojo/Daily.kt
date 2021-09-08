@@ -1,11 +1,10 @@
 package com.example.weathertest.model.model.pojo
 
+import com.google.gson.annotations.SerializedName
+
 class Daily {
 
-    private var summary: String? = null
-
-    private var icon: String? = null
-
-    var data: List<DayOfWeek?>? = null
+    @SerializedName("data")
+    val data: List<DayOfWeek?>? = null
 
 }

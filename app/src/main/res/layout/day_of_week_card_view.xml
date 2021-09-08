@@ -22,98 +22,79 @@
 
 
         <ImageView
-            android:id="@+id/imageViewWeekTemp"
+            android:id="@+id/week_icon_info"
             android:layout_width="42dp"
             android:layout_height="42dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_circle" />
+            app:srcCompat="@drawable/ic_circle"
+            android:contentDescription="@string/icon_week_weather" />
 
         <TextView
-            android:id="@+id/textViewDayOfWeek"
+            android:id="@+id/day_of_week"
+            android:text="Day of week"
+            app:layout_constraintStart_toEndOf="@+id/week_icon_info"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/week_weather_info" />
+
+        <TextView
+            android:id="@+id/day_of_month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thusday"
-            android:textColor="@color/black"
+            android:text="actual date"
             android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageViewWeekTemp"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/week_icon_info"
+            app:layout_constraintStart_toEndOf="@+id/week_icon_info" />
 
         <TextView
-            android:id="@+id/textViewDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="18 october"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewWeekTemp"
-            app:layout_constraintStart_toEndOf="@+id/imageViewWeekTemp" />
-
-        <TextView
-            android:id="@+id/textViewMinTemperature"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/week_min_temperature"
             android:layout_marginEnd="6dp"
-            android:text="-16 \u2109"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:text="min"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/view2"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/min_max_week_weather" />
 
         <TextView
-            android:id="@+id/textViewMaxTemperature"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/max_week_temperature"
             android:layout_marginStart="6dp"
-            android:text="-10 \u2109"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:text="max"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/view2"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/min_max_week_weather"/>
 
         <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/week_label_wind"
             android:layout_marginEnd="18dp"
             android:text="Wind"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/week_label_humidity"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/week_weather_label" />
 
         <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/week_label_humidity"
             android:layout_marginEnd="4dp"
             android:text="Humidity"
-            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/week_weather_label"/>
 
         <TextView
-            android:id="@+id/textViewHumidityPercent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/humidity_week_info"
             android:text="67%"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView6"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintEnd_toEndOf="@+id/week_label_humidity"
+            app:layout_constraintStart_toStartOf="@+id/week_label_humidity"
+            app:layout_constraintTop_toBottomOf="@+id/week_label_humidity"
+            style="@style/week_weather_info" />
 
         <TextView
-            android:id="@+id/textViewWindSpeed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/wind_week_info"
             android:text="3 mph"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView5"
-            app:layout_constraintStart_toStartOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintEnd_toEndOf="@+id/week_label_wind"
+            app:layout_constraintStart_toStartOf="@+id/week_label_wind"
+            app:layout_constraintTop_toBottomOf="@+id/week_label_wind"
+            style="@style/week_weather_info" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

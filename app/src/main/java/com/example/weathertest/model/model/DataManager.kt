@@ -16,8 +16,10 @@ object DataManager{
 
         fun getWeatherData(latitude:Double?,longitude:Double?){
             getData.loadData(latitude,longitude)
-            getData.dispose()
         }
+    fun dispose(){
+        getData.dispose()
+    }
 
      fun getHourlyWeather(): RealmResults<HourWeatherCondition> {
         return databaseWeatherInstance.getHourlyWeather()

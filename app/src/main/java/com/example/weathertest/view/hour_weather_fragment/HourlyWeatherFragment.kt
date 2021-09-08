@@ -9,7 +9,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.weathertest.databinding.FragmentHourlyWeatherBinding
-import com.example.weathertest.view.hour_weather_fragment.HourlyAdapter
 import com.example.weathertest.viewModel.CurrentWeatherViewModel
 
 class HourlyWeatherFragment : Fragment() {
@@ -29,14 +28,14 @@ class HourlyWeatherFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         weatherViewModel.hourlyWeatherViewModel.observe(context as LifecycleOwner,{
-            adapter.refresHours(it)
+            adapter.refreshHours(it)
         })
         binding = FragmentHourlyWeatherBinding.inflate(inflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val recyclerView = binding.RecyclerViewHour
+        val recyclerView = binding.listOfHours
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
         recyclerView.adapter = adapter

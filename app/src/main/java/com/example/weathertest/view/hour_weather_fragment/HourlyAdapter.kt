@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weathertest.R
 import com.example.weathertest.model.model.database.tables.HourWeatherCondition
-import com.example.weathertest.setIcon
+import com.example.weathertest.utils.setIcon
 import kotlinx.android.synthetic.main.hour_card_view.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -17,7 +17,7 @@ class HourlyAdapter :
 
     var hours: List<HourWeatherCondition> = arrayListOf()
 
-    fun refresHours(hours: List<HourWeatherCondition>) {
+    fun refreshHours(hours: List<HourWeatherCondition>) {
         this.hours = hours
         notifyDataSetChanged()
     }
@@ -35,10 +35,12 @@ class HourlyAdapter :
     }
 
     override fun onBindViewHolder(holder: HourlyAdapterViewHolder, position: Int) {
+
         val hour = hours[position]
         val calendar = Calendar.getInstance()
+        val sdfHour = SimpleDateFormat("HH:mm")
+
         with(holder) {
-            val sdfHour = SimpleDateFormat("HH:mm")
             val dayOfWeek = Date(hour.hourTime.toLong() * 1000)
             time.text = sdfHour.format(dayOfWeek)
             hourTemp.text = "${hour.hourTemperature.roundToInt()}°"

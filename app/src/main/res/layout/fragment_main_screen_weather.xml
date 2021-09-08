@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/place_holder_currentInfo"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.main_screen_fragment.MainScreenWeatherFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_divider"
+        app:layout_constraintGuide_percent="0.3"
+        style="@style/divider_style" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_divider"
+        app:layout_constraintGuide_percent="0.5"
+        style="@style/divider_style"  />
+
+    <FrameLayout
+        android:id="@+id/actual_weather_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/top_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/hour_weather_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_divider" />
+
+    <FrameLayout
+        android:id="@+id/week_weather_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_divider" >
+    </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

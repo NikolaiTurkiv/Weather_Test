@@ -1,19 +1,19 @@
 package com.example.weathertest.model.model.pojo
 
+import com.google.gson.annotations.SerializedName
+
 class MainPojo {
-    val latitude = 0.0
 
-    val longitude = 0.0
-
+    @SerializedName("timezone")
     val timezone: String? = null
 
+    @SerializedName("currently")
     val currently: Currently? = null
 
+    @SerializedName("hourly")
     val hourly: Hourly? = null
 
+    @SerializedName("daily")
     val daily: Daily? = null
 
-    private val flags: Flags? = null
-
-    private val offset = 0
 }

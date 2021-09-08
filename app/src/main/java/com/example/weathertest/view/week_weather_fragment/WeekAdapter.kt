@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weathertest.R
 import com.example.weathertest.model.model.database.tables.WeekWeatherCondition
-import com.example.weathertest.setIcon
+import com.example.weathertest.utils.setIcon
 import kotlinx.android.synthetic.main.day_of_week_card_view.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -16,7 +16,7 @@ class WeekAdapter : RecyclerView.Adapter<WeekAdapter.WeekAdapterViewHolder>() {
 
     private var days:List<WeekWeatherCondition> = arrayListOf()
 
-    fun refresDays(days: List<WeekWeatherCondition>) {
+    fun refreshDays(days: List<WeekWeatherCondition>) {
         this.days = days
         notifyDataSetChanged()
     }
@@ -24,13 +24,13 @@ class WeekAdapter : RecyclerView.Adapter<WeekAdapter.WeekAdapterViewHolder>() {
 
     inner class WeekAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        val timeDayOfWeek = itemView.textViewDayOfWeek
-        val timeDate = itemView.textViewDate
-        var icon = itemView.imageViewWeekTemp
-        var minTemperature =itemView.textViewMinTemperature
-        var maxTemperature = itemView.textViewMaxTemperature
-        var wind = itemView.textViewWindSpeed
-        var humidity = itemView.textViewHumidityPercent
+        val timeDayOfWeek = itemView.day_of_week
+        val timeDate = itemView.day_of_month
+        var icon = itemView.week_icon_info
+        var minTemperature =itemView.week_min_temperature
+        var maxTemperature = itemView.max_week_temperature
+        var wind = itemView.wind_week_info
+        var humidity = itemView.humidity_week_info
 
     }
 
@@ -47,9 +47,11 @@ class WeekAdapter : RecyclerView.Adapter<WeekAdapter.WeekAdapterViewHolder>() {
 
         val day = days[position]
 
+        val sdfDayOfWeek = SimpleDateFormat("EEEE")
+        val sdfNameMonth = SimpleDateFormat("dd MMMM")
+
         with(holder){
-            val sdfDayOfWeek = SimpleDateFormat("EEEE")
-            val sdfNameMonth = SimpleDateFormat("dd MMMM")
+
             val dayOfWeek = Date(day.time.toLong() * 1000)
             val montDate = Date(day.time.toLong()*1000)
 

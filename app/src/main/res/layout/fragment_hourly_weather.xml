@@ -6,7 +6,7 @@
     tools:context=".view.hour_weather_fragment.HourlyWeatherFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerViewHour"
+        android:id="@+id/list_of_hours"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

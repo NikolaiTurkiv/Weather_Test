@@ -12,25 +12,19 @@
 
         <TextView
             android:id="@+id/textViewTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="09:00"
             android:layout_margin ="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/hourly_weather_info" />
 
         <TextView
             android:id="@+id/textViewHourTemp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-16"
             android:layout_marginTop="10dp"
-            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/textViewTime"
             app:layout_constraintStart_toStartOf="@+id/textViewTime"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTime" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTime"
+            style="@style/hourly_weather_info"/>
 
         <ImageView
             android:id="@+id/imageViewHourWeather"
@@ -40,7 +34,8 @@
             app:layout_constraintEnd_toEndOf="@+id/textViewTime"
             app:layout_constraintStart_toStartOf="@+id/textViewTime"
             app:layout_constraintTop_toBottomOf="@+id/textViewHourTemp"
-            app:srcCompat="@drawable/ic_location" />
+            app:srcCompat="@drawable/ic_location"
+            android:contentDescription="@string/icon_hourly_weather" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
